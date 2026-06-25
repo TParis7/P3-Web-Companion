@@ -1,1 +1,0 @@
-import{u as e}from"./spinner-BzgZQMTL.js";import{N as r,U as t,S as o,i}from"./demo-data-C6Vt75Av.js";import{i as u}from"./demo-mode-u_CtnNs9.js";async function a(){return u()?r():(await t(o(i))).getMe}function y(){return e({queryKey:["my-profile"],queryFn:a})}export{y as u};

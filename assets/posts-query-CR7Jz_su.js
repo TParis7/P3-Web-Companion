@@ -1,1 +1,0 @@
-import{u as s}from"./spinner-BzgZQMTL.js";import{K as o,U as e,S as r,p as u}from"./demo-data-C6Vt75Av.js";import{i as n}from"./demo-mode-u_CtnNs9.js";async function i(t){return n()?o(t):(await e(r(u),t)).listPosts}function c(t){return s({queryKey:["posts",t],queryFn:()=>i(t)})}export{c as u};
