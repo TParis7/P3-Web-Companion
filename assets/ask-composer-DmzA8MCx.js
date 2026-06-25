@@ -1,4 +1,4 @@
-import{y as a,v as t}from"./chunk-4N6VE7H7-DPxeA9do.js";import{B as k}from"./button-CGrsMIiG.js";import{u as N,T as S}from"./textarea-BTrstAYl.js";import{a as w}from"./demo-mode-u_CtnNs9.js";import{g as C,L as P,p as m,P as A}from"./guide-corpus-DoDMkdIg.js";import{u as i}from"./demo-data-I3J8DX-N.js";import{c as x}from"./createLucideIcon-DkVGHPr-.js";/**
+import{y as a,v as t}from"./chunk-4N6VE7H7-DPxeA9do.js";import{B as k}from"./button-CGrsMIiG.js";import{u as N,T as S}from"./textarea-lTtYfK7o.js";import{a as w}from"./demo-mode-u_CtnNs9.js";import{g as C,L as P,p as m,P as A}from"./guide-corpus-DoDMkdIg.js";import{v as i}from"./demo-data-DayAur76.js";import{c as x}from"./createLucideIcon-DkVGHPr-.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
