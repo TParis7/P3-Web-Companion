@@ -1,4 +1,4 @@
-import{u as e,P as u,x as h}from"./chunk-4N6VE7H7-DU3JZ2nd.js";import{C as x,S as g}from"./spinner-B5iYJFxP.js";import{a as b}from"./demo-mode-Dvqw2czW.js";import{O as f,n as o}from"./demo-data-CvUKuvP5.js";import{c as j}from"./createLucideIcon-CVIlnmeg.js";import{a as v,u as N}from"./opportunities-query-CYCQPpA3.js";import{S as y}from"./sparkles-BqS8dR_5.js";import"./loader-circle-BgCyOVgL.js";import"./browser-auth-client-BWZJw5Lx.js";import"./auth-events-B8k65-1l.js";/**
+import{u as e,P as u,x as h}from"./chunk-4N6VE7H7-DU3JZ2nd.js";import{C as x,S as g}from"./spinner-B5iYJFxP.js";import{a as b}from"./demo-mode-Dvqw2czW.js";import{O as f,n as o}from"./demo-data-Bday3eyB.js";import{c as j}from"./createLucideIcon-CVIlnmeg.js";import{a as v,u as N}from"./opportunities-query-BwDcxhZM.js";import{S as y}from"./sparkles-BqS8dR_5.js";import"./loader-circle-BgCyOVgL.js";import"./browser-auth-client-BWZJw5Lx.js";import"./auth-events-B8k65-1l.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
