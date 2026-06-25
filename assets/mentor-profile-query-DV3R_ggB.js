@@ -1,1 +1,0 @@
-import{u as e}from"./spinner-BzgZQMTL.js";import{B as r,R as t,N as o,g as n}from"./demo-data-DBbrQBjh.js";import{i}from"./demo-mode-u_CtnNs9.js";async function u(){return i()?r():(await t(o(n))).getMe}function c(){return e({queryKey:["mentor-profile"],queryFn:u})}export{c as u};
