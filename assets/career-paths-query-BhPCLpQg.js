@@ -1,0 +1,1 @@
+import{u as e}from"./spinner-BzgZQMTL.js";import{H as t,F as a,n as s}from"./graphql-CZIJWGl7.js";import{g as o}from"./demo-data-CkGDyiFx.js";import{i as u}from"./demo-mode-u_CtnNs9.js";async function n(r){return u()?o(r):(await t(a(s),r)).listCareerPaths}function p(r){return e({queryKey:["career-paths",r],queryFn:()=>n(r)})}export{p as u};

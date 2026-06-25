@@ -1,0 +1,1 @@
+import{u as s}from"./spinner-BzgZQMTL.js";import{H as o,F as r,u as e}from"./graphql-CZIJWGl7.js";import{p as u}from"./demo-data-CkGDyiFx.js";import{i}from"./demo-mode-u_CtnNs9.js";async function n(t){return i()?u(t):(await o(r(e),t)).listPosts}function y(t){return s({queryKey:["posts",t],queryFn:()=>n(t)})}export{y as u};

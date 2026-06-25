@@ -1,0 +1,1 @@
+import{u as e}from"./spinner-BzgZQMTL.js";import{H as r,F as t,l as o}from"./graphql-CZIJWGl7.js";import{q as i}from"./demo-data-CkGDyiFx.js";import{i as u}from"./demo-mode-u_CtnNs9.js";async function a(){return u()?i():(await r(t(o))).getMe}function p(){return e({queryKey:["my-profile"],queryFn:a})}export{p as u};
