@@ -1,9 +1,9 @@
-import{v as t}from"./chunk-4N6VE7H7-DPxeA9do.js";import{A as i,b as s,a as y}from"./avatar-DOI8W357.js";import{a as l}from"./avatar-color-DiY2YhOK.js";import{c as e}from"./createLucideIcon-DkVGHPr-.js";import{G as d}from"./graduation-cap-rfkAivsO.js";import{B as k}from"./briefcase-Wtl1kOP_.js";import{C as p}from"./compass-C9SIFm20.js";import{a as m}from"./utils-DclmTqRz.js";/**
+import{v as c}from"./chunk-4N6VE7H7-DPxeA9do.js";import{A as i,b as y,a as l}from"./avatar-DOI8W357.js";import{a as s}from"./avatar-color-DiY2YhOK.js";import{c as e}from"./createLucideIcon-DkVGHPr-.js";import{G as d}from"./graduation-cap-rfkAivsO.js";import{B as k}from"./briefcase-Wtl1kOP_.js";import{C as p}from"./compass-C9SIFm20.js";import{a as m}from"./utils-DclmTqRz.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const x=[["rect",{width:"20",height:"12",x:"2",y:"6",rx:"2",key:"9lu3g6"}],["circle",{cx:"12",cy:"12",r:"2",key:"1c9p78"}],["path",{d:"M6 12h.01M18 12h.01",key:"113zkx"}]],u=e("Banknote",x);/**
+ */const u=[["rect",{width:"20",height:"12",x:"2",y:"6",rx:"2",key:"9lu3g6"}],["circle",{cx:"12",cy:"12",r:"2",key:"1c9p78"}],["path",{d:"M6 12h.01M18 12h.01",key:"113zkx"}]],x=e("Banknote",u);/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
@@ -23,17 +23,17 @@ import{v as t}from"./chunk-4N6VE7H7-DPxeA9do.js";import{A as i,b as s,a as y}fro
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const w=[["path",{d:"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",key:"c3ymky"}],["path",{d:"M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66",key:"4oyue0"}],["path",{d:"m18 15-2-2",key:"60u0ii"}],["path",{d:"m15 18-2-2",key:"6p76be"}]],N=e("HeartHandshake",w);/**
+ */const w=[["path",{d:"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",key:"c3ymky"}],["path",{d:"M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66",key:"4oyue0"}],["path",{d:"m18 15-2-2",key:"60u0ii"}],["path",{d:"m15 18-2-2",key:"6p76be"}]],z=e("HeartHandshake",w);/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const z=[["line",{x1:"3",x2:"21",y1:"22",y2:"22",key:"j8o0r"}],["line",{x1:"6",x2:"6",y1:"18",y2:"11",key:"10tf0k"}],["line",{x1:"10",x2:"10",y1:"18",y2:"11",key:"54lgf6"}],["line",{x1:"14",x2:"14",y1:"18",y2:"11",key:"380y"}],["line",{x1:"18",x2:"18",y1:"18",y2:"11",key:"1kevvc"}],["polygon",{points:"12 2 20 7 4 7",key:"jkujk7"}]],j=e("Landmark",z);/**
+ */const N=[["line",{x1:"3",x2:"21",y1:"22",y2:"22",key:"j8o0r"}],["line",{x1:"6",x2:"6",y1:"18",y2:"11",key:"10tf0k"}],["line",{x1:"10",x2:"10",y1:"18",y2:"11",key:"54lgf6"}],["line",{x1:"14",x2:"14",y1:"18",y2:"11",key:"380y"}],["line",{x1:"18",x2:"18",y1:"18",y2:"11",key:"1kevvc"}],["polygon",{points:"12 2 20 7 4 7",key:"jkujk7"}]],C=e("Landmark",N);/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const C=[["path",{d:"m3 11 18-5v12L3 14v-3z",key:"n962bs"}],["path",{d:"M11.6 16.8a3 3 0 1 1-5.8-1.6",key:"1yl0tm"}]],$=e("Megaphone",C);/**
+ */const j=[["path",{d:"m3 11 18-5v12L3 14v-3z",key:"n962bs"}],["path",{d:"M11.6 16.8a3 3 0 1 1-5.8-1.6",key:"1yl0tm"}]],$=e("Megaphone",j);/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
@@ -68,4 +68,4 @@ import{v as t}from"./chunk-4N6VE7H7-DPxeA9do.js";import{A as i,b as s,a as y}fro
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const D=[["path",{d:"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z",key:"cbrjhi"}]],E=e("Wrench",D),P=[{match:/agricultur|farm/,icon:R},{match:/health|medic/,icon:F},{match:/law|legal/,icon:B},{match:/tech/,icon:f},{match:/scien|research/,icon:b},{match:/engineer/,icon:E},{match:/athlet|sport/,icon:_},{match:/art|entertain/,icon:S},{match:/educat|academ/,icon:d},{match:/govern|public service|policy/,icon:j},{match:/communicat|media|marketing|journal/,icon:$},{match:/community|social/,icon:N},{match:/commerce|retail|sales/,icon:L},{match:/financ|bank|account/,icon:u},{match:/business/,icon:k}];function U(a){if(!a)return null;const o=a.toLowerCase();for(const c of P)if(c.match.test(o))return c.icon;return p}function e1({name:a,seed:o,imageUrl:c,industry:h,className:n}){const r=U(h)??V;return t.jsxs(i,{className:n,children:[c?t.jsx(s,{alt:a,src:c}):null,t.jsxs(y,{className:m("text-white",n),style:{backgroundImage:l(o)},children:[t.jsx(r,{"aria-hidden":!0,className:"size-1/2"}),t.jsx("span",{className:"sr-only",children:a})]})]})}export{e1 as M};
+ */const D=[["path",{d:"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z",key:"cbrjhi"}]],E=e("Wrench",D),P=[{match:/agricultur|farm/,icon:R},{match:/health|medic/,icon:F},{match:/law|legal/,icon:B},{match:/tech/,icon:f},{match:/scien|research/,icon:b},{match:/engineer/,icon:E},{match:/athlet|sport/,icon:_},{match:/art|entertain/,icon:S},{match:/educat|academ/,icon:d},{match:/govern|public service|policy/,icon:C},{match:/communicat|media|marketing|journal/,icon:$},{match:/community|social/,icon:z},{match:/commerce|retail|sales/,icon:L},{match:/financ|bank|account/,icon:x},{match:/business/,icon:k}];function U(t){if(!t)return null;const o=t.toLowerCase();for(const a of P)if(a.match.test(o))return a.icon;return p}function e1({name:t,seed:o,imageUrl:a,industry:h,className:n}){const r=U(h)??V;return c.jsxs(i,{className:n,children:[a?c.jsx(y,{alt:t,src:a}):null,c.jsx(l,{className:m("text-white",n),style:{backgroundImage:s(o)},children:c.jsx(r,{"aria-hidden":!0,className:"size-1/2"})})]})}export{e1 as M};
