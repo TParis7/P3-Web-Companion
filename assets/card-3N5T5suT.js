@@ -1,1 +1,0 @@
-import{v as o}from"./chunk-4N6VE7H7-DPxeA9do.js";import{a as d}from"./utils-DclmTqRz.js";function e({className:r,...a}){return o.jsx("div",{"data-slot":"card",className:d("bg-card/80 text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm backdrop-blur-md",r),...a})}export{e as C};
