@@ -1,4 +1,4 @@
-import{c as h}from"./createLucideIcon-DkVGHPr-.js";import{a as n}from"./spinner-DFAOiIpR.js";import{I as c,H as s,u as m,g as b}from"./graphql-B7hP_1b4.js";import{o as f,c as d}from"./demo-data-CjZrrdyg.js";import{i as u}from"./demo-mode-u_CtnNs9.js";/**
+import{c as h}from"./createLucideIcon-DkVGHPr-.js";import{a as n}from"./spinner-DFAOiIpR.js";import{I as c,H as s,u as m,g as b}from"./graphql-B7hP_1b4.js";import{o as f,c as d}from"./demo-data-BBwMhpvE.js";import{i as u}from"./demo-mode-u_CtnNs9.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
