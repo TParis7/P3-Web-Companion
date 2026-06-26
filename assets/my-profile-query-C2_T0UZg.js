@@ -1,1 +1,0 @@
-import{a as e}from"./useQuery-BfsX374s.js";import{X as r,_ as t,Z as o,m as i}from"./demo-data-D8xd8L0p.js";import{i as a}from"./demo-mode-DP5p7s05.js";async function u(){return a()?r():(await t(o(i))).getMe}function y(){return e({queryKey:["my-profile"],queryFn:u})}export{y as u};
