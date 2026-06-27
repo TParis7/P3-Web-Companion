@@ -1,0 +1,1 @@
+import{D as t,g as e,a5 as a,a4 as o,i as r}from"./demo-data-D_zZ-XyP.js";import{i as s,g as i}from"./demo-mode-DP5p7s05.js";async function f(){return s()?i()==="mentor"?t:e:(await a(o(r))).getMe}export{f};
