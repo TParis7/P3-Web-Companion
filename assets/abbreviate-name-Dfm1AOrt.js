@@ -1,1 +1,0 @@
-function n(s){const t=s.trim().split(/\s+/).filter(Boolean);if(t.length<2)return s.trim();const a=(t[t.length-1]??"").charAt(0).toUpperCase(),e=t.slice(0,-1).join(" ");return a?`${e} ${a}.`:e}export{n as a};

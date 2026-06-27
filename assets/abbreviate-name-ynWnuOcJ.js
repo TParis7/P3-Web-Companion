@@ -1,0 +1,1 @@
+import{c as e}from"./capitalize-name-yDYBArSP.js";function o(a){const t=a.trim().split(/\s+/).filter(Boolean);if(t.length<2)return e(a.trim());const i=(t[t.length-1]??"").charAt(0).toUpperCase(),s=e(t.slice(0,-1).join(" "));return i?`${s} ${i}.`:s}export{o as a};
