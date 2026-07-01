@@ -1,0 +1,1 @@
+import{Q as o,v as t,d as r,O as s}from"./chunk-4N6VE7H7-DPxeA9do.js";import{u}from"./auth-session-context-fGKdOmoC.js";const i=o(function(){const{role:e}=u();return e==="mentee"?t.jsx(r,{replace:!0,to:"/home"}):t.jsx(s,{})});export{i as default};
