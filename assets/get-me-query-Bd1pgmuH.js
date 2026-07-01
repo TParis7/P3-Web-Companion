@@ -1,1 +1,0 @@
-import{D as t,g as e,ad as a,ac as o,i as r}from"./demo-data-CXPasTEK.js";import{i as s,g as i}from"./demo-mode-BtDdrF-m.js";async function c(){return s()?i()==="mentor"?t:e:(await a(o(r))).getMe}export{c as f};
