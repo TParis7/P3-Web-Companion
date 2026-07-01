@@ -1,0 +1,1 @@
+import{a as e}from"./useQuery-BfsX374s.js";import{a0 as r,ad as t,ac as o,l as a}from"./demo-data-WBX0cgcU.js";import{i as n}from"./demo-mode-BtDdrF-m.js";async function i(){return n()?r():(await t(o(a))).getMe}function c(){return e({queryKey:["mentor-profile"],queryFn:i})}export{c as u};
