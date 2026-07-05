@@ -49,6 +49,11 @@
 /* Match the web app's 15px rem base (app.css `html{font-size:15px}`) so type
    scale + spacing read the same next to platform.pulseofp3.org. */
 html{background:var(--canvas);font-size:15px}
+/* Same responsive step-ups app.css uses — the sidebar (16rem) + its rem-based
+   padding/gaps scale on wide monitors so the ribbon matches the app there. */
+@media (min-width:1536px){html{font-size:16px}}
+@media (min-width:1920px){html{font-size:17px}}
+@media (min-width:2560px){html{font-size:18.5px}}
 body{
   font-family:var(--font-sans);font-size:14px;line-height:1.5;color:var(--text);
   -webkit-font-smoothing:antialiased;min-height:100vh;
@@ -685,7 +690,7 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" type="button">☰</button>
       <div class="topbar-spacer"></div>
       <div class="topbar-actions">
-        <span class="sample-pill">Illustrative sample data</span>
+        <span class="sample-pill">Sample Data</span>
         <button class="btn btn-secondary" type="button" onclick="window.print()">⤓ <span class="btn-label">Export PDF</span></button>
       </div>
     </div>
@@ -701,7 +706,6 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
        intake pop-up (org · admin · cohort size/industry) will personalize. -->
   <section class="hero">
     <div class="hero-content">
-      <span class="hero-tag"><span class="tag-dot"></span> Cohort Overview · Last 12 Months</span>
       <h2>Good afternoon, <span class="hl">Renée</span></h2>
       <p class="hero-sub">Here's how your cohort is progressing on the P3 platform — every milestone, outcome, and future hire traced from first interest to first role, all in one view.</p>
 
@@ -1137,28 +1141,12 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <div class="dashboard-footer">
-    <div class="branding">
-      <img src="https://cdn.prod.website-files.com/69b02f65f0068e9fb16f09f7/69b02f65f0068e9fb16f0df1_P3%20Logo.svg" alt="P3">
-      <div>
-        <strong style="color:var(--text-dim)">Pulse of Perseverance Project</strong> · Partner Insights v2.0<br>
-        Prepared for Your Organization · Illustrative sample data · Powered by the P3 Workforce Pipeline OS
-      </div>
-    </div>
-    <div class="conf">SAMPLE / ILLUSTRATIVE DATA · Prepared for Your Organization</div>
-  </div>
 
   </div><!-- /view-dashboard -->
 
   <!-- ========== MY PROFILE VIEW ========== -->
   <div class="view" id="view-profile">
     <div class="account-page">
-      <div class="account-header">
-        <h1>My Profile</h1>
-        <p>Your P3 Partner Insights account and plan details for your organization.</p>
-      </div>
-
       <div class="card profile-card">
         <div class="profile-id">
           <div class="profile-avatar">
