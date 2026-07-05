@@ -46,7 +46,9 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{background:var(--canvas)}
+/* Match the web app's 15px rem base (app.css `html{font-size:15px}`) so type
+   scale + spacing read the same next to platform.pulseofp3.org. */
+html{background:var(--canvas);font-size:15px}
 body{
   font-family:var(--font-sans);font-size:14px;line-height:1.5;color:var(--text);
   -webkit-font-smoothing:antialiased;min-height:100vh;
@@ -78,33 +80,18 @@ body{overflow-x:clip}
   transition:transform .25s ease;
   overflow-y:auto;
 }
-.brand{display:flex;align-items:center;padding:0 14px;margin-bottom:14px}
-.brand img{height:34px;width:auto;object-fit:contain}
+/* Logo block — mirrors the app shell: 34px white P3 SVG, 14px left inset,
+   self-start so flex doesn't stretch it. */
+.brand{display:flex;align-items:center;padding:0 14px;margin-bottom:26px}
+.brand img{height:34px;width:auto;object-fit:contain;align-self:flex-start}
 
-.brand-badge{
-  display:flex;align-items:center;gap:9px;
-  background:rgba(255,255,255,0.07);
-  border:1px solid rgba(255,255,255,0.10);
-  border-radius:12px;padding:9px 11px;margin:0 2px 22px;
-}
-.brand-badge-icon{
-  width:28px;height:28px;border-radius:8px;
-  background:linear-gradient(135deg,#E0443F,#D4322F);
-  color:#fff;display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-heading);font-weight:700;font-size:11px;letter-spacing:0.02em;
-  flex-shrink:0;box-shadow:var(--shadow-btn-primary);
-}
-.brand-badge-text{display:flex;flex-direction:column;line-height:1.25;min-width:0}
-.brand-badge-title{font-size:11px;font-weight:700;color:#fff;letter-spacing:0.05em;text-transform:uppercase}
-.brand-badge-sub{font-size:9.5px;color:rgba(255,255,255,0.45);letter-spacing:0.03em;font-weight:500;margin-top:1px}
-
-.nav-section{margin-bottom:4px;padding-top:14px}
+.nav-section{margin-bottom:4px;padding-top:22px}
 .nav-section:first-of-type{padding-top:0}
-.nav-label{font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.38);margin-bottom:7px;padding:0 12px;font-weight:600}
+.nav-label{font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.38);margin-bottom:8px;padding:0 12px;font-weight:600}
 .nav-item{
   display:flex;align-items:center;gap:10px;width:100%;
   height:42px;padding:0 12px;border-radius:12px;
-  font-size:14px;font-weight:500;color:rgba(255,255,255,0.75);
+  font-size:14.5px;font-weight:500;color:rgba(255,255,255,0.75);
   cursor:pointer;transition:all .15s;margin-bottom:2px;text-align:left;
 }
 .nav-item:hover{background:rgba(255,255,255,0.07);color:#fff}
@@ -113,14 +100,31 @@ body{overflow-x:clip}
   color:#fff;font-weight:600;
   box-shadow:var(--shadow-nav-active);
 }
-.nav-icon{width:17px;height:17px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
-.nav-icon svg{width:16px;height:16px}
+.nav-icon{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-icon svg{width:17px;height:17px}
 
-.sidebar-footer{
-  margin-top:auto;padding:14px 12px 6px;border-top:1px solid rgba(255,255,255,0.10);
-  font-size:11px;color:rgba(255,255,255,0.45);line-height:1.75;
+/* User chip footer — identical structure to the app shell (avatar + name +
+   @handle + sign-out icon button). */
+.sidebar-user{
+  margin-top:auto;display:flex;align-items:center;gap:10px;
+  padding:12px 14px 6px;border-top:1px solid rgba(255,255,255,0.09);
 }
-.sidebar-footer strong{color:rgba(255,255,255,0.80);font-weight:600}
+.sidebar-user-avatar{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#C7566B,#8A2740);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.sidebar-user-avatar svg{width:19px;height:19px}
+.sidebar-user-text{min-width:0;flex:1;line-height:1.25}
+.sidebar-user-name{font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sidebar-user-handle{font-size:12px;color:rgba(255,255,255,0.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sidebar-logout{
+  width:32px;height:32px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.55);transition:all .15s;
+}
+.sidebar-logout:hover{background:rgba(255,255,255,0.1);color:#fff}
+.sidebar-logout svg{width:18px;height:18px}
 
 /* ─────────────── Topbar (frosted once scrolled, like the app) ─────────────── */
 .topbar{
@@ -156,9 +160,53 @@ body{overflow-x:clip}
 
 /* ─────────────── Main ─────────────── */
 .main{padding:10px 28px 60px;max-width:1520px;margin:0 auto;width:100%}
+/* Page title matches the app's standard: font-heading, 22px, semibold. */
 .page-head{margin:6px 0 18px}
-.page-head h1{font-size:26px;font-weight:700;letter-spacing:-0.015em}
-.page-head .page-sub{font-size:13px;color:var(--text-muted);margin-top:3px}
+.page-head h1{font-size:22px;font-weight:600;letter-spacing:-0.01em}
+.page-head .page-sub{font-size:14px;color:var(--text-muted);margin-top:3px}
+
+/* View switching — dashboard (default) vs the account page-views. */
+.view{display:none}
+.view.active{display:block}
+
+/* Account page-views (My Profile / Help & feedback) — mirror the app's
+   route pages: capped reading width, header + frosted cards. */
+.account-page{max-width:760px}
+.account-header{margin-bottom:20px}
+.account-header h1{font-size:22px;font-weight:600;letter-spacing:-0.01em}
+.account-header p{font-size:14px;color:var(--muted-fg);margin-top:4px;line-height:1.55;max-width:60ch}
+
+.profile-card{margin-bottom:16px}
+.profile-id{display:flex;align-items:center;gap:16px}
+.profile-avatar{
+  width:74px;height:74px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#C7566B,#8A2740);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+}
+.profile-avatar svg{width:34px;height:34px}
+.profile-id-text{min-width:0;flex:1}
+.profile-id-text h2{font-size:22px;font-weight:700;line-height:1.2}
+.profile-id-text .handle{font-size:14px;color:var(--text-muted);margin-top:1px}
+.profile-edit-btn{flex-shrink:0}
+.profile-meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:#544d48}
+.profile-meta span{display:inline-flex;align-items:center;gap:6px}
+.profile-meta svg{width:14px;height:14px;flex-shrink:0;color:var(--text-muted)}
+
+.detail-heading{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-bottom:6px;color:var(--text)}
+.detail-heading svg{width:16px;height:16px;color:var(--crimson)}
+.detail-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--divider)}
+.detail-row:first-of-type{border-top:none}
+.detail-row dt{color:var(--muted-fg);font-size:13.5px}
+.detail-row dd{text-align:right;font-weight:500;font-size:13.5px}
+
+/* Help & feedback blocks — mirror the app's feedback-by-email + resource card. */
+.help-block{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.help-block-icon{width:44px;height:44px;border-radius:12px;background:var(--secondary,#F0EBE5);display:flex;align-items:center;justify-content:center;color:var(--muted-fg)}
+.help-block-icon.crimson{background:var(--red-bg);color:var(--crimson)}
+.help-block-icon svg{width:20px;height:20px}
+.help-block h2{font-size:17px;font-weight:600}
+.help-block p{font-size:14px;color:var(--muted-fg);line-height:1.6;max-width:58ch}
+.help-block a.link{font-weight:600;color:var(--crimson);text-decoration:underline;text-underline-offset:2px}
 
 /* ─────────────── Filter bar ─────────────── */
 .filter-bar{
@@ -556,69 +604,71 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
     <img src="https://cdn.prod.website-files.com/69b02f65f0068e9fb16f09f7/69b02f65f0068e9fb16f0df1_P3%20Logo.svg" alt="Pulse of Perseverance Project">
   </div>
 
-  <div class="brand-badge">
-    <div class="brand-badge-icon">OS</div>
-    <div class="brand-badge-text">
-      <div class="brand-badge-title">Partner Insights</div>
-      <div class="brand-badge-sub">Institutional OS · v2.0</div>
-    </div>
-  </div>
-
   <nav>
     <div class="nav-section">
       <div class="nav-label">Overview</div>
-      <button class="nav-item active" data-scroll="top" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></span>
+      <button class="nav-item active" data-view="dashboard" data-scroll="top" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.6 3.2h5.1a1.4 1.4 0 0 1 1.4 1.4v3.9a1.4 1.4 0 0 1-1.4 1.4H4.6a1.4 1.4 0 0 1-1.4-1.4V4.6a1.4 1.4 0 0 1 1.4-1.4Zm9.7 0h5.1a1.4 1.4 0 0 1 1.4 1.4v6.5a1.4 1.4 0 0 1-1.4 1.4h-5.1a1.4 1.4 0 0 1-1.4-1.4V4.6a1.4 1.4 0 0 1 1.4-1.4ZM4.6 12.9h5.1a1.4 1.4 0 0 1 1.4 1.4v5.1a1.4 1.4 0 0 1-1.4 1.4H4.6a1.4 1.4 0 0 1-1.4-1.4v-5.1a1.4 1.4 0 0 1 1.4-1.4Zm9.7 3.2h5.1a1.4 1.4 0 0 1 1.4 1.4v1.9a1.4 1.4 0 0 1-1.4 1.4h-5.1a1.4 1.4 0 0 1-1.4-1.4v-1.9a1.4 1.4 0 0 1 1.4-1.4Z"/></svg></span>
         Executive Dashboard
       </button>
-      <button class="nav-item" data-scroll="sec-retention" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+      <button class="nav-item" data-view="dashboard" data-scroll="sec-retention" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 20.5a1.1 1.1 0 0 1-1.1-1.1V4.6a1.1 1.1 0 0 1 2.2 0v13.7h15.9a1.1 1.1 0 0 1 0 2.2ZM20.9 7.2 14.6 13a1.1 1.1 0 0 1-1.45.05L10.2 10.6l-3.4 3.1a1.05 1.05 0 1 1-1.42-1.55l4.1-3.75a1.1 1.1 0 0 1 1.44 0l2.9 2.4 5.5-5.05h-1.72a1.05 1.05 0 0 1 0-2.1h4.05a1.05 1.05 0 0 1 1.05 1.05V7.7a1.05 1.05 0 0 1-2.1 0Z"/></svg></span>
         Pipeline Retention
       </button>
-      <button class="nav-item" data-scroll="sec-schools" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span>
+      <button class="nav-item" data-view="dashboard" data-scroll="sec-schools" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 3.6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><path d="M9 11.9a5.9 5.9 0 0 0-5.85 5.2A1.5 1.5 0 0 0 4.64 18.8h8.72a1.5 1.5 0 0 0 1.49-1.7A5.9 5.9 0 0 0 9 11.9Z"/><path d="M16.4 4.6a3 3 0 0 0-1.3.3 4.6 4.6 0 0 1 0 5.6 3 3 0 1 0 1.3-5.9Z"/><path d="M16.5 12a4.7 4.7 0 0 0-1.1.13 7.3 7.3 0 0 1 1.55 4.4q0 .34-.05.67h3.1A1.4 1.4 0 0 0 21.4 15.8 4.6 4.6 0 0 0 16.5 12Z"/></svg></span>
         Cohort Explorer
       </button>
       <button class="nav-item" data-modal="benchmarking" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3.2" y="12.6" width="4" height="7.8" rx="1.2"/><rect x="10" y="3.6" width="4" height="16.8" rx="1.2"/><rect x="16.8" y="8.4" width="4" height="12" rx="1.2"/></svg></span>
         Benchmarking
       </button>
     </div>
 
     <div class="nav-section">
       <div class="nav-label">Outcomes</div>
-      <button class="nav-item" data-scroll="sec-funnel" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-6 8v6l-4 2v-8L4 4z"/></svg></span>
+      <button class="nav-item" data-view="dashboard" data-scroll="sec-funnel" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.4 4a1.2 1.2 0 0 1 1.1-.7h15a1.2 1.2 0 0 1 .95 1.95l-5.75 7.4v6.2a1.2 1.2 0 0 1-.66 1.07l-3 1.5A1.2 1.2 0 0 1 8.3 20.4v-7.75L3.5 5.35A1.2 1.2 0 0 1 3.4 4Z"/></svg></span>
         Longitudinal Funnel
       </button>
-      <button class="nav-item" data-scroll="sec-outcomes" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
+      <button class="nav-item" data-view="dashboard" data-scroll="sec-outcomes" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.2a9.8 9.8 0 1 0 0 19.6 9.8 9.8 0 0 0 0-19.6Zm3.45 4.35a.85.85 0 0 1 1 1l-1.7 4.95a2.3 2.3 0 0 1-1.45 1.45l-4.95 1.7a.85.85 0 0 1-1-1l1.7-4.95a2.3 2.3 0 0 1 1.45-1.45ZM12 10.55a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9Z"/></svg></span>
         Field Match
       </button>
-      <button class="nav-item" data-scroll="sec-engagement" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6.5 12 9.5 5 14.5 19 17.5 12 22 12"/></svg></span>
+      <button class="nav-item" data-view="dashboard" data-scroll="sec-engagement" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3.2" y="14" width="4" height="6.6" rx="1.2"/><rect x="10" y="9.4" width="4" height="11.2" rx="1.2"/><rect x="16.8" y="4" width="4" height="16.6" rx="1.2"/></svg></span>
         Engagement Tiers
       </button>
     </div>
 
     <div class="nav-section">
       <div class="nav-label">Account</div>
+      <button class="nav-item" data-view="profile" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.4a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2Z"/><path d="M12 13.2a7.2 7.2 0 0 0-7.1 6.1A1.4 1.4 0 0 0 6.3 21h11.4a1.4 1.4 0 0 0 1.4-1.7A7.2 7.2 0 0 0 12 13.2Z"/></svg></span>
+        My Profile
+      </button>
       <button class="nav-item" data-modal="reports" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></span>
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.4 3.2h6.35L19 8.45V18.4a2.4 2.4 0 0 1-2.4 2.4H7.4A2.4 2.4 0 0 1 5 18.4V5.6a2.4 2.4 0 0 1 2.4-2.4Zm6.45 1.7v2.85a.85.85 0 0 0 .85.85h2.9Z"/></svg></span>
         Custom Reports
       </button>
-      <button class="nav-item" data-modal="support" type="button">
-        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2.5-3 4"/><line x1="12" y1="17.5" x2="12" y2="17.6"/></svg></span>
-        Help &amp; Support
+      <button class="nav-item" data-view="help" type="button">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.4a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2ZM12 7.8a4.2 4.2 0 1 0 0 8.4 4.2 4.2 0 0 0 0-8.4ZM10.9 1.7h2.2v6.0h-2.2zM10.9 16.3h2.2v6.0h-2.2zM1.7 10.9h6.0v2.2H1.7zM16.3 10.9h6.0v2.2h-6.0z"/></svg></span>
+        Help &amp; feedback
       </button>
     </div>
   </nav>
 
-  <div class="sidebar-footer">
-    <strong>Partner:</strong> FMOL Health<br>
-    <strong>Plan:</strong> Insights ($25K/yr)<br>
-    <strong>Seats:</strong> 312 active · 1,500 licensed<br>
-    <strong>Renewal:</strong> May 31, 2027
+  <div class="sidebar-user">
+    <div class="sidebar-user-avatar">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3.4a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2Z"/><path d="M12 13.2a7.2 7.2 0 0 0-7.1 6.1A1.4 1.4 0 0 0 6.3 21h11.4a1.4 1.4 0 0 0 1.4-1.7A7.2 7.2 0 0 0 12 13.2Z"/></svg>
+    </div>
+    <div class="sidebar-user-text">
+      <div class="sidebar-user-name">Renée Fontaine</div>
+      <div class="sidebar-user-handle">@renee-fontaine</div>
+    </div>
+    <a class="sidebar-logout" href="/login" aria-label="Sign out" title="Sign out">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+    </a>
   </div>
 </aside>
 <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
@@ -630,7 +680,6 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
   <div class="topbar" id="topbar">
     <div class="topbar-inner">
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" type="button">☰</button>
-      <div class="breadcrumb">Partner Insights <span class="sep">›</span> <span class="current">Executive Dashboard</span></div>
       <div class="topbar-spacer"></div>
       <div class="topbar-actions">
         <span class="sample-pill">◐ <span class="sample-label">Illustrative sample data</span></span>
@@ -640,6 +689,9 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
   </div>
 
   <main class="main">
+
+  <!-- ========== DASHBOARD VIEW ========== -->
+  <div class="view active" id="view-dashboard">
 
   <!-- Page head -->
   <div class="page-head">
@@ -1098,6 +1150,89 @@ table.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
     <div class="conf">SAMPLE / ILLUSTRATIVE DATA · Prepared for FMOL Health</div>
   </div>
 
+  </div><!-- /view-dashboard -->
+
+  <!-- ========== MY PROFILE VIEW ========== -->
+  <div class="view" id="view-profile">
+    <div class="account-page">
+      <div class="account-header">
+        <h1>My Profile</h1>
+        <p>Your P3 Partner Insights account and plan details for FMOL Health.</p>
+      </div>
+
+      <div class="card profile-card">
+        <div class="profile-id">
+          <div class="profile-avatar">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3.4a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2Z"/><path d="M12 13.2a7.2 7.2 0 0 0-7.1 6.1A1.4 1.4 0 0 0 6.3 21h11.4a1.4 1.4 0 0 0 1.4-1.7A7.2 7.2 0 0 0 12 13.2Z"/></svg>
+          </div>
+          <div class="profile-id-text">
+            <h2>Renée Fontaine</h2>
+            <div class="handle">@renee-fontaine</div>
+          </div>
+          <button class="btn btn-secondary profile-edit-btn" type="button">Edit profile</button>
+        </div>
+        <div class="profile-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg> FMOL Health</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Workforce Partnerships Director</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Baton Rouge, LA</span>
+        </div>
+      </div>
+
+      <div class="card profile-card">
+        <div class="detail-heading">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.4a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2Z"/><path d="M12 13.2a7.2 7.2 0 0 0-7.1 6.1A1.4 1.4 0 0 0 6.3 21h11.4a1.4 1.4 0 0 0 1.4-1.7A7.2 7.2 0 0 0 12 13.2Z"/></svg>
+          Account details
+        </div>
+        <dl>
+          <div class="detail-row"><dt>Name</dt><dd>Renée Fontaine</dd></div>
+          <div class="detail-row"><dt>Role</dt><dd>Workforce Partnerships Director</dd></div>
+          <div class="detail-row"><dt>Email</dt><dd>renee.fontaine@fmolhs.org</dd></div>
+          <div class="detail-row"><dt>Organization</dt><dd>FMOL Health</dd></div>
+          <div class="detail-row"><dt>Member since</dt><dd>June 2025</dd></div>
+        </dl>
+      </div>
+
+      <div class="card profile-card">
+        <div class="detail-heading">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.8 3.4h14.4A2.8 2.8 0 0 1 22 6.2v11.6a2.8 2.8 0 0 1-2.8 2.8H4.8A2.8 2.8 0 0 1 2 17.8V6.2A2.8 2.8 0 0 1 4.8 3.4Zm.9 4.1a.9.9 0 0 0 0 1.8h6a.9.9 0 0 0 0-1.8Zm0 3.6a.9.9 0 0 0 0 1.8h12.6a.9.9 0 0 0 0-1.8Zm0 3.6a.9.9 0 0 0 0 1.8h12.6a.9.9 0 0 0 0-1.8Z"/></svg>
+          Plan &amp; seats
+        </div>
+        <dl>
+          <div class="detail-row"><dt>Plan</dt><dd>Insights · $25K / yr</dd></div>
+          <div class="detail-row"><dt>Seats</dt><dd>312 active · 1,500 licensed</dd></div>
+          <div class="detail-row"><dt>Data layers</dt><dd>Engagement · Milestone · Outcome</dd></div>
+          <div class="detail-row"><dt>Renewal</dt><dd>May 31, 2027</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div><!-- /view-profile -->
+
+  <!-- ========== HELP & FEEDBACK VIEW ========== -->
+  <div class="view" id="view-help">
+    <div class="account-page">
+      <div class="account-header">
+        <h1>Help &amp; feedback</h1>
+        <p>Found a bug or have an idea? Tell us — it goes straight to the team and helps make P3 better for everyone. Need a hand now? Use the chat bubble in the corner.</p>
+      </div>
+
+      <div class="card profile-card">
+        <div class="help-block">
+          <span class="help-block-icon crimson"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <h2>Share a bug or an idea</h2>
+          <p>Email our team at <a class="link" href="mailto:team@pulseofp3.org">team@pulseofp3.org</a> and we'll take it from there — we read every message. You can also use the chat bubble in the corner to reach us right now.</p>
+        </div>
+      </div>
+
+      <div class="card profile-card">
+        <div class="help-block">
+          <span class="help-block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-9.33-5"/><path d="M6 8a6 6 0 0 0 6 9.4"/><circle cx="12" cy="12" r="3"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></span>
+          <h2>Your partner success contact</h2>
+          <p>Your dedicated P3 partner-success team, the Mentee Milestone Framework documentation, and product guides are all one message away. Reach us anytime at <a class="link" href="mailto:team@pulseofp3.org">team@pulseofp3.org</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /view-help -->
+
   </main>
 </div>
 </div>
@@ -1153,21 +1288,29 @@ document.getElementById('navModalClose').addEventListener('click', closeNavModal
 navModal.addEventListener('click', e=>{ if(e.target===navModal) closeNavModal(); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape' && navModal.classList.contains('open')) closeNavModal(); });
 
+function showView(view){
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active', v.id === 'view-'+view));
+}
 document.querySelectorAll('.sidebar .nav-item').forEach(item=>{
   item.addEventListener('click', ()=>{
     const modalKey = item.dataset.modal;
-    const scrollTarget = item.dataset.scroll;
+    // Feature placeholders (Benchmarking, Custom Reports) still open a modal and
+    // leave the current view + active nav item untouched.
     if(modalKey){
       openNavModal(modalKey);
-    } else if(scrollTarget){
-      document.querySelectorAll('.sidebar .nav-item').forEach(n=>n.classList.remove('active'));
-      item.classList.add('active');
-      if(scrollTarget==='top'){
-        window.scrollTo({top:0, behavior:'smooth'});
-      } else {
-        const el = document.getElementById(scrollTarget);
-        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-      }
+      if(window.innerWidth < 960) sb.classList.remove('open');
+      return;
+    }
+    const view = item.dataset.view;      // dashboard | profile | help
+    const scrollTarget = item.dataset.scroll;
+    document.querySelectorAll('.sidebar .nav-item').forEach(n=>n.classList.remove('active'));
+    item.classList.add('active');
+    if(view) showView(view);
+    if(view === 'dashboard' && scrollTarget && scrollTarget !== 'top'){
+      const el = document.getElementById(scrollTarget);
+      if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    } else {
+      window.scrollTo({top:0, behavior:'smooth'});
     }
     if(window.innerWidth < 960) sb.classList.remove('open');
   });
