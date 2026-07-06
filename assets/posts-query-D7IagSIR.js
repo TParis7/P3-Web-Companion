@@ -1,1 +1,0 @@
-import{a as s}from"./useQuery-BfsX374s.js";import{a9 as o,ae as e,ad as r,E as a}from"./demo-data-DhYoXZMH.js";import{a as u}from"./demo-mode-CiXhTUOq.js";async function n(t){return u()?o(t):(await e(r(a),t)).listPosts}function p(t){return s({queryKey:["posts",t],queryFn:()=>n(t)})}export{p as u};
