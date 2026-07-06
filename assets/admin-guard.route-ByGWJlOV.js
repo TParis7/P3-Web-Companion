@@ -1,4 +1,4 @@
-import{y as m,G as b,H as v,v as e,L as N,c as w,Q as j,d as y,O as k}from"./chunk-4N6VE7H7-DPxeA9do.js";import{d as A,a as D,g as C}from"./demo-mode-tcQ8txW4.js";import{A as E}from"./app-config-BVdh87U3.js";import{a as g}from"./utils-DclmTqRz.js";import{D as I,T as z,F as L,C as M,B as P,P as _,a as S,b as O,c as h,H as R}from"./admin-icons-DoaZsyJS.js";import{a as F,A as H}from"./admin-sample-data-5OjH3KhQ.js";import{L as B,M as G}from"./menu-tb-LfPq3.js";import{c as T}from"./createLucideIcon-DkVGHPr-.js";/**
+import{y as m,G as b,H as v,v as e,L as N,c as w,Q as j,d as y,O as k}from"./chunk-4N6VE7H7-DPxeA9do.js";import{d as A,a as D,g as C}from"./demo-mode-tcQ8txW4.js";import{A as E}from"./app-config-BVdh87U3.js";import{a as g}from"./utils-DclmTqRz.js";import{D as I,T as z,F as L,C as M,B as P,P as _,a as S,b as O,c as h,H as R}from"./admin-icons-DoaZsyJS.js";import{a as F,A as H}from"./admin-sample-data-Bzl-Vcly.js";import{L as B,M as G}from"./menu-tb-LfPq3.js";import{c as T}from"./createLucideIcon-DkVGHPr-.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.

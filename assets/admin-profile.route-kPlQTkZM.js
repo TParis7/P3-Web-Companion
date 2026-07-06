@@ -1,4 +1,4 @@
-import{Q as c,v as e}from"./chunk-4N6VE7H7-DPxeA9do.js";import{C as r}from"./card-vT7qQou0.js";import{c as o}from"./admin-icons-DoaZsyJS.js";import{a as i,A as x,b as l}from"./admin-sample-data-5OjH3KhQ.js";import{c as m}from"./createLucideIcon-DkVGHPr-.js";import{B as d}from"./briefcase-Wtl1kOP_.js";import{M as p}from"./map-pin-CoPeiRVK.js";import{U as h}from"./user-DylIi-Se.js";import{F as f}from"./file-text-D5PwtjOY.js";import"./utils-DclmTqRz.js";/**
+import{Q as c,v as e}from"./chunk-4N6VE7H7-DPxeA9do.js";import{C as r}from"./card-vT7qQou0.js";import{c as o}from"./admin-icons-DoaZsyJS.js";import{a as i,A as x,b as l}from"./admin-sample-data-Bzl-Vcly.js";import{c as m}from"./createLucideIcon-DkVGHPr-.js";import{B as d}from"./briefcase-Wtl1kOP_.js";import{M as p}from"./map-pin-CoPeiRVK.js";import{U as h}from"./user-DylIi-Se.js";import{F as f}from"./file-text-D5PwtjOY.js";import"./utils-DclmTqRz.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
