@@ -1,1 +1,0 @@
-import{D as t,h as a,g as o,ae as s,ad as r,j as i}from"./demo-data-DhYoXZMH.js";import{a as n,g as M,i as m}from"./demo-mode-tcQ8txW4.js";async function f(){if(n()){const e=M()==="mentor"?t:a;return m()?{...e,dob:o}:e}return(await s(r(i))).getMe}export{f};
