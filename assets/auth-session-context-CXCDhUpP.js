@@ -1,0 +1,1 @@
+import{y as e,v as u}from"./chunk-4N6VE7H7-DPxeA9do.js";const s=e.createContext(null);function x({user:t,role:o,isAdult:r,children:n}){return u.jsx(s.Provider,{value:{user:t,role:o,isAdult:r},children:n})}function a(){const t=e.useContext(s);if(!t)throw new Error("useAuthSession must be used under AuthSessionProvider");return t}export{x as A,a as u};
