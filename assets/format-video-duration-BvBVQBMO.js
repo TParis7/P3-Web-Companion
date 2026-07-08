@@ -1,0 +1,1 @@
+function s(n){if(!n)return"";const t=n.trim();if(t.includes(":"))return t;const r=Number(t);if(!Number.isFinite(r)||r<0)return t;const e=Math.round(r),i=Math.floor(e/60),o=e%60;return`${i}:${String(o).padStart(2,"0")}`}export{s as f};
