@@ -1,0 +1,1 @@
+import{a as t}from"./useQuery-BfsX374s.js";import{X as a,ae as n,ad as r,I as s}from"./demo-data-CkN-TtTg.js";import{b as u}from"./demo-mode-Bf7WLFkt.js";async function o(e){return u()?a():(await n(r(s),e)).myMenteePathways}function f(e){return t({queryKey:["mentee-pathways",e],queryFn:()=>o(e)})}export{f as u};
