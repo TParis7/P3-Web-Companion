@@ -1,0 +1,1 @@
+const r=new Set(["?","!",".","…"]),s=new Set([")","]","}",'"',"'","”","’","»"]);function i(n){const e=(n??"").trim();if(e.length===0)return e;let t=e.length-1;for(;t>=0&&s.has(e[t]);)t-=1;return t<0||r.has(e[t])?e:`${e}?`}export{i as e};
