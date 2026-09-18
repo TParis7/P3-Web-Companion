@@ -1,4 +1,4 @@
-import{Q as m,v as e}from"./chunk-4N6VE7H7-DPxeA9do.js";import{C as c}from"./card-vT7qQou0.js";import{M as l}from"./mail-C80nQcBx.js";import{c as d}from"./createLucideIcon-DkVGHPr-.js";import"./utils-DclmTqRz.js";/**
+import{Q as m,v as e}from"./chunk-4N6VE7H7-DPxeA9do.js";import{C as c}from"./card-DFwmL7Mt.js";import{M as l}from"./mail-C80nQcBx.js";import{c as d}from"./createLucideIcon-DkVGHPr-.js";import"./utils-DclmTqRz.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
