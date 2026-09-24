@@ -1,0 +1,1 @@
+import{a as e}from"./useQuery-BfsX374s.js";import{_ as r,Z as t,q as o}from"./graphql-Brt4Qg7T.js";import{v as i}from"./demo-data-Br-yhvAa.js";import{b as a}from"./demo-mode-C88ObUUp.js";async function u(){return a()?i():(await r(t(o))).getMe}function p(){return e({queryKey:["my-profile"],queryFn:u})}export{p as u};
