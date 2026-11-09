@@ -1,0 +1,1 @@
+import{d as i}from"./useQuery-h5z5wUg4.js";import{a as o}from"./demo-pathways-BgHwvuGh.js";function n(){return o.map((r,e)=>({id:r.id,name:r.name,intro:r.intro,description:r.description,imageUrl:r.imageUrl,order:e+1}))}function a(){return i({queryKey:["resource-pathways"],queryFn:async()=>n()})}export{a as u};

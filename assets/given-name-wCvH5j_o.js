@@ -1,0 +1,1 @@
+import{c as s}from"./capitalize-name-yDYBArSP.js";const e=/^(dr|prof|mr|mrs|ms|rev)\.?$/i;function a(t){const r=t.trim().split(/\s+/).filter(Boolean).find(i=>!e.test(i));return s(r??t.trim())}export{a as g};

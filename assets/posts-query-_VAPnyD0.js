@@ -1,1 +1,0 @@
-import{a as s}from"./useQuery-BfsX374s.js";import{_ as o,Z as r,H as e}from"./graphql-D6JOuKUC.js";import{t as u}from"./demo-data-BllwC5y7.js";import{b as n}from"./demo-mode-C88ObUUp.js";async function a(t){return n()?u(t):(await o(r(e),t)).listPosts}function y(t){return s({queryKey:["posts",t],queryFn:()=>a(t)})}export{y as u};
