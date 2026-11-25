@@ -1,0 +1,1 @@
+import{A as a}from"./app-config-oRnA0jpM.js";import{g as i}from"./browser-auth-client-DMSobb3l.js";async function s(){var n;const o={"Content-Type":"application/json"};a.aiAppToken&&(o["X-P3-App-Token"]=a.aiAppToken);try{const t=i();await t.ensureFreshTokens();const e=(n=t.getTokens())==null?void 0:n.idToken;e&&(o.Authorization=e)}catch{}return o}export{s as a};
