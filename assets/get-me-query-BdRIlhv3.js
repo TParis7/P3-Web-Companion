@@ -1,0 +1,1 @@
+import{_ as e,Z as o,h as r}from"./graphql-CP11CCMd.js";import{D as a,b as s,a as n}from"./demo-data-BPzFViSt.js";import{c as i,g as m,i as u}from"./demo-mode-MsyWBw02.js";function M(){if(!i())return null;const t=m()==="mentor"?a:s;return u()?{...t,dob:n}:t}async function E(){const t=M();return t||(await e(o(r))).getMe}export{M as d,E as f};

@@ -1,0 +1,1 @@
+import{d as t}from"./useQuery-D-9-DXqk.js";import{_ as a,Z as r,K as n}from"./graphql-CP11CCMd.js";import{e as s}from"./demo-data-BPzFViSt.js";import{c as o}from"./demo-mode-MsyWBw02.js";async function u(e){return o()?s():(await a(r(n),e)).myMenteePathways}function c(e){return t({queryKey:["mentee-pathways",e],queryFn:()=>u(e)})}export{c as u};

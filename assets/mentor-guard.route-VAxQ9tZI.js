@@ -1,0 +1,1 @@
+import{T as o,v as t,d as r,O as s}from"./chunk-4N6VE7H7-BacZQuMo.js";import{u as n}from"./auth-session-context-A_qXKshP.js";const i=o(function(){const{role:e}=n();return e==="mentee"?t.jsx(r,{replace:!0,to:"/mentee"}):t.jsx(s,{})});export{i as default};
